@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -8,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Erzincan Uçar Taksi | Güvenli ve Hızlı Hizmet - Otogar, Havalimanı, Üniversite",
-  description: "Erzincan merkez taksi, EBYÜ üniversite taksi, Mengücek Gazi hastanesi taksi, Erzincan otogar taksi, Ergan Dağı taksi ve havaalanı taksi. 7/24 Kesintisiz hizmet.",
+  title: "Erzincan Eşot Taksi | Güvenli ve Hızlı Havalimanı & Otogar Hizmeti",
+  description: "Erzincan merkez taksi, Havalimanı ve Otogar resmi durağı. EBYÜ üniversite taksi, Mengücek Gazi hastanesi taksi. 7/24 Kesintisiz hizmet.",
   keywords: [
     "Erzincan taksi", 
     "Erzincan merkez taksi", 
@@ -18,17 +20,15 @@ export const metadata: Metadata = {
     "Erzincan otogar taksi",
     "Erzincan havalimanı taksi",
     "Erzincan üniversite taksi",
-    "Erzincan araştırma hastanesi taksi",
-    "Mengücek Gazi Eğitim ve Araştırma Hastanesi taksi",
-    "Uçar taksi", 
+    "Eşot taksi", 
     "Erzincan en yakın taksi",
     "Erzincan güvenilir taksi"
   ],
   openGraph: {
-    title: "Erzincan Uçar Taksi | Havalimanı, Otogar, Üniversite",
+    title: "Erzincan Eşot Taksi | Havalimanı & Otogar Resmi Durağı",
     description: "Erzincan'ın her noktasına; üniversiteye, hastaneye, havalimanına ve otogara en hızlı ulaşım.",
-    url: "https://erzincanucartaksi.com",
-    siteName: "Erzincan Uçar Taksi",
+    url: "https://erzincanesottaksi.com",
+    siteName: "Erzincan Eşot Taksi",
     locale: "tr_TR",
     type: "website",
   },
@@ -45,9 +45,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased text-neutral-900 bg-neutral-50`}>
+      <body className={`${inter.variable} font-sans antialiased text-neutral-900 bg-white`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
 }
+
