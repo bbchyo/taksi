@@ -1,65 +1,219 @@
+import { Phone, MessageCircle, MapPin, Clock, ShieldCheck, Car, Star, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
+  const phoneNumber = "+905555555555"; // Placeholder
+  const whatsappUrl = `https://wa.me/905555555555`; // Placeholder
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen">
+      {/* Header */}
+      <header className="fixed top-0 inset-x-0 z-50 glass-effect">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="bg-primary-500 p-2 rounded-xl">
+              <Car className="w-6 h-6 text-neutral-900" />
+            </div>
+            <span className="font-bold text-xl tracking-tight text-neutral-900">
+              Erzincan <span className="text-primary-600">Uçar Taksi</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link 
+              href={`tel:${phoneNumber}`}
+              className="hidden sm:flex items-center gap-2 font-medium text-neutral-700 hover:text-primary-600 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Hemen Ara</span>
+            </Link>
+            <Link 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-green-500/30 flex items-center gap-2"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-100/50 via-neutral-50 to-neutral-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-800 font-medium mb-8 text-sm border border-primary-200 shadow-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-600"></span>
+            </span>
+            Erzincan Merkez & Ergan Dağı 7/24 Hizmet
+          </div>
+          
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-neutral-900 mb-6 leading-tight">
+            Güvenli, Hızlı ve <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-yellow-400">
+              Konforlu Ulaşım
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-lg sm:text-xl text-neutral-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Erzincan Uçar Taksi ile günün her saati şehrin her noktasına güvenle seyahat edin. Uygun fiyatlar, güler yüzlü hizmet ve temiz araçlarımızla hizmetinizdeyiz.
           </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              href={`tel:${phoneNumber}`}
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-neutral-900/20 hover:-translate-y-1"
+            >
+              <Phone className="w-6 h-6" />
+              Taksi Çağır
+            </Link>
+            <Link 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 text-neutral-900 border border-neutral-200 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-sm hover:shadow hover:-translate-y-1"
+            >
+              <MessageCircle className="w-6 h-6 text-green-500" />
+              Fiyat Sor
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-neutral-50 border border-neutral-100 hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mb-6">
+                <Clock className="w-7 h-7 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">7/24 Kesintisiz Hizmet</h3>
+              <p className="text-neutral-600 leading-relaxed">Günün her saati, gece gündüz demeden bir telefon uzağınızdayız. Erzincan nöbetçi taksi ihtiyaçlarınız için buradayız.</p>
+            </div>
+            
+            <div className="p-8 rounded-3xl bg-neutral-50 border border-neutral-100 hover:shadow-lg transition-shadow relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100 rounded-bl-full -z-10 opacity-50"></div>
+              <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mb-6">
+                <ShieldCheck className="w-7 h-7 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">Güvenli Seyahat</h3>
+              <p className="text-neutral-600 leading-relaxed">Deneyimli şoförlerimiz ve periyodik bakımları yapılmış araçlarımızla ailenizle birlikte güvenle seyahat edin.</p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-neutral-50 border border-neutral-100 hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mb-6">
+                <Car className="w-7 h-7 text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">Ergan Dağı Transfer</h3>
+              <p className="text-neutral-600 leading-relaxed">Kayak merkezi, havaalanı, otogar ve çevre ilçelere özel konforlu transfer hizmetimizden yararlanın.</p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-24 bg-neutral-50 border-t border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2 space-y-8">
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">Size Çok Yakınız</h2>
+                <p className="text-lg text-neutral-600 leading-relaxed">Erzincan merkezde bulunan durağımızla şehrin her yerine en hızlı şekilde ulaşıyoruz. Konumumuza haritadan bakabilir veya hemen taksi çağırabilirsiniz.</p>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 border border-neutral-100">
+                    <MapPin className="w-5 h-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Adres</h4>
+                    <p className="text-neutral-600 mt-1">Merkez Mah. [Sokak/Cadde] No:1, Erzincan Merkez</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 border border-neutral-100">
+                    <Phone className="w-5 h-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Telefon / WhatsApp</h4>
+                    <Link href={`tel:${phoneNumber}`} className="text-neutral-600 hover:text-primary-600 transition-colors mt-1 block">
+                      {phoneNumber}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <Link 
+                href={`tel:${phoneNumber}`}
+                className="inline-flex items-center gap-2 font-semibold text-primary-700 hover:text-primary-800 transition-colors group"
+              >
+                Hemen Yol Tarifi Al
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="lg:w-1/2 w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl shadow-neutral-200/50 border border-neutral-200 relative">
+              {/* Fallback pattern while map loads, or placeholder for map iframe */}
+              <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center z-[-1]">
+                <MapPin className="w-12 h-12 text-neutral-300" />
+              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48474.91427218324!2d39.467812165034636!3d39.74230677553538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e5cdcc368297f%3A0x6b82fe75d6bede44!2sErzincan%20Merkez%2FErzincan!5e0!3m2!1str!2str!4v1715000000000!5m2!1str!2str" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-neutral-900 pt-16 pb-8 border-t border-neutral-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+            <div className="flex items-center gap-2">
+              <div className="bg-primary-500 p-2 rounded-xl">
+                <Car className="w-6 h-6 text-neutral-900" />
+              </div>
+              <span className="font-bold text-2xl tracking-tight text-white">
+                Erzincan <span className="text-primary-500">Uçar Taksi</span>
+              </span>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              <Link href={`tel:${phoneNumber}`} className="text-neutral-400 hover:text-white transition-colors p-2 rounded-full hover:bg-neutral-800">
+                <Phone className="w-6 h-6" />
+                <span className="sr-only">Telefon</span>
+              </Link>
+              <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-green-500 transition-colors p-2 rounded-full hover:bg-neutral-800">
+                <MessageCircle className="w-6 h-6" />
+                <span className="sr-only">WhatsApp</span>
+              </Link>
+            </div>
+          </div>
+          
+          <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-neutral-500 text-sm">
+              &copy; {new Date().getFullYear()} Erzincan Uçar Taksi. Tüm hakları saklıdır.
+            </p>
+            <p className="text-neutral-600 text-sm">
+              Erzincan Taksi, Ergan Dağı Taksi, Erzincan Nöbetçi Taksi
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
