@@ -65,12 +65,12 @@ export default function Home() {
             <div className="relative group lg:h-[600px] flex items-center justify-center">
               <div className="absolute inset-0 bg-primary-500/20 rounded-full blur-3xl group-hover:bg-primary-500/30 transition-colors animate-pulse"></div>
               <Image 
-                src="/hero-taxi.png" 
-                alt="Erzincan VİP Taksi" 
-                width={800}
-                height={600}
+                src="/kartvizit.jpg" 
+                alt="Erzincan VİP Taksi - Faruk Tutar Kartvizit" 
+                width={1024}
+                height={512}
                 priority
-                className="relative z-10 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] hover:scale-105 transition-transform duration-700 pointer-events-none"
+                className="relative z-10 rounded-3xl shadow-2xl border-4 border-white/50 hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>
