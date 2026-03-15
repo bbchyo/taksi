@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, ShieldCheck, UserCheck, Star, Clock } from "lucide-react";
+import { CheckCircle2, ShieldCheck, UserCheck, Star, Clock, Heart, CreditCard } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,7 @@ export default function AboutPage() {
           <span className="text-primary-600 font-bold uppercase tracking-widest text-sm mb-4 block">Kurumsal Profil</span>
           <h1 className="text-4xl lg:text-6xl font-black text-neutral-900 mb-6">Hakkımızda</h1>
           <p className="text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed">
-            Erzincan'da güven ve kalitenin tek adresi. Yılların tecrübesiyle havalimanı ve otogar transferlerinde lider taksi durağı.
+            Erzincan VİP Taksi olarak, &quot;Sevgi Taşıyoruz&quot; sloganıyla güvenli ve konforlu ulaşım hizmeti sunuyoruz.
           </p>
         </div>
       </header>
@@ -22,8 +22,8 @@ export default function AboutPage() {
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary-500/10 rounded-full -z-10 animate-pulse"></div>
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl shadow-neutral-200 border-8 border-white">
                 <Image 
-                  src="/hero-taxi.png" 
-                  alt="Erzincan Eşot Taksi Araç" 
+                  src="/taksi-on.jpg" 
+                  alt="Erzincan VİP Taksi Araç" 
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
@@ -31,17 +31,17 @@ export default function AboutPage() {
               </div>
               <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-[2rem] shadow-2xl border border-neutral-100 z-20">
                 <div className="flex items-center gap-4">
-                  <div className="text-4xl font-black text-primary-600">20+</div>
-                  <div className="text-xs font-black text-neutral-500 uppercase tracking-widest leading-tight">Yıllık<br />Sektör Tecrübesi</div>
+                  <Heart className="w-8 h-8 text-red-500 fill-current" />
+                  <div className="text-xs font-black text-neutral-500 uppercase tracking-widest leading-tight">&quot;Sevgi<br />Taşıyoruz&quot;</div>
                 </div>
               </div>
             </div>
 
             <div className="space-y-10">
               <div className="space-y-6">
-                <h2 className="text-3xl lg:text-4xl font-black text-neutral-900 leading-tight">Tecrübe, Güven ve Kaliteli Hizmet</h2>
+                <h2 className="text-3xl lg:text-4xl font-black text-neutral-900 leading-tight">Güven, Konfor ve VİP Kalite</h2>
                 <p className="text-neutral-600 leading-relaxed text-lg italic">
-                  Erzincan Eşot Taksi olarak, güvenilir bir Erzincan havalimanı taksi arayanlar için şehrimizin tek yetkili durağı olmanın gururunu yaşıyoruz. Yılların tecrübesi, profesyonel şoför kadromuz ve müşteri memnuniyeti odaklı anlayışımızla tüm ulaşım ihtiyaçlarınız için yanınızdayız.
+                  Erzincan VİP Taksi olarak, İnönü Mahallesi Merkez Postane Yanı, Valilik Karşısı konumundan 7/24 hizmet veriyoruz. Faruk Tutar yönetiminde, profesyonel şoför kadromuz ve müşteri memnuniyeti odaklı anlayışımızla tüm ulaşım ihtiyaçlarınız için yanınızdayız.
                 </p>
               </div>
 
@@ -58,6 +58,11 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+
+              <div className="flex items-center gap-3 bg-primary-50 border border-primary-100 rounded-2xl px-5 py-4">
+                <CreditCard className="w-6 h-6 text-primary-600" />
+                <span className="font-bold text-neutral-800">Kredi Kartı ile Ödeme Kabul Edilir</span>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +78,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold">Misyonumuz</h3>
               <p className="text-neutral-400 leading-relaxed">
-                Erzincan'da taksi ihtiyacı olan herkese hızlı ulaşım sağlamak ve güvenli sürüş standartlarını korumak. Her müşterimize ailemizden biri gibi davranmak ana ilkemizdir.
+                Erzincan'da taksi ihtiyacı olan herkese hızlı, güvenli ve VİP kalitesinde ulaşım sağlamak. Her müşterimize ailemizden biri gibi davranmak ana ilkemizdir.
               </p>
             </div>
             
@@ -83,7 +88,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold">Vizyonumuz</h3>
               <p className="text-neutral-400 leading-relaxed">
-                Erzincan taksi durağı denildiğinde akla gelen ilk seçenek olmak ve 7/24 erişilebilir hizmet sunmak. Bölgenin dijital ve operasyonel anlamda en modern durağı olmak.
+                Erzincan taksi denildiğinde akla gelen ilk VİP seçenek olmak. 7/24 erişilebilir, modern ve güvenilir hizmet sunmak.
               </p>
             </div>
 

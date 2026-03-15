@@ -10,25 +10,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Erzincan Eşot Taksi | Güvenli ve Hızlı Havalimanı & Otogar Hizmeti",
-  description: "Erzincan merkez taksi, Havalimanı ve Otogar resmi durağı. EBYÜ üniversite taksi, Mengücek Gazi hastanesi taksi. 7/24 Kesintisiz hizmet.",
+  title: "Erzincan VİP Taksi | 7/24 Güvenli Taksi Hizmeti - Faruk Tutar",
+  description: "Erzincan VİP Taksi - İnönü Mahallesi Merkez Postane Yanı, Valilik Karşısı. 7/24 şehir içi, havalimanı, otogar ve üniversite taksi hizmeti. Kredi kartı geçerlidir. 0551 859 35 81",
   keywords: [
-    "Erzincan taksi", 
-    "Erzincan merkez taksi", 
-    "Ergan dağı taksi", 
-    "Erzincan nöbetçi taksi", 
+    "Erzincan taksi",
+    "Erzincan VİP taksi",
+    "Erzincan merkez taksi",
+    "Ergan dağı taksi",
+    "Erzincan nöbetçi taksi",
     "Erzincan otogar taksi",
     "Erzincan havalimanı taksi",
     "Erzincan üniversite taksi",
-    "Eşot taksi", 
     "Erzincan en yakın taksi",
-    "Erzincan güvenilir taksi"
+    "Erzincan güvenilir taksi",
+    "Erzincan valilik taksi",
+    "Erzincan postane taksi",
+    "Faruk Tutar taksi",
+    "Erzincan kredi kartlı taksi"
   ],
   openGraph: {
-    title: "Erzincan Eşot Taksi | Havalimanı & Otogar Resmi Durağı",
-    description: "Erzincan'ın her noktasına; üniversiteye, hastaneye, havalimanına ve otogara en hızlı ulaşım.",
-    url: "https://erzincanesottaksi.com",
-    siteName: "Erzincan Eşot Taksi",
+    title: "Erzincan VİP Taksi | Sevgi Taşıyoruz",
+    description: "Erzincan'ın her noktasına 7/24 güvenli, konforlu ve VİP kalitesinde taksi hizmeti. Kredi kartı geçerlidir.",
+    url: "https://erzincanviptaksi.com",
+    siteName: "Erzincan VİP Taksi",
     locale: "tr_TR",
     type: "website",
   },
@@ -53,4 +57,3 @@ export default function RootLayout({
     </html>
   );
 }
-

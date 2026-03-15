@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, Car } from "lucide-react";
+import { Phone, Menu, X, Car, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -16,7 +16,6 @@ const navLinks = [
   { name: "Anasayfa", href: "/" },
   { name: "Hakkımızda", href: "/hakkimizda" },
   { name: "Hizmetlerimiz", href: "/hizmetlerimiz" },
-  { name: "Ücret Tarifesi", href: "/ucret-tarifesi" },
   { name: "Araçlarımız", href: "/araclarimiz" },
   { name: "Bize Ulaşın", href: "/bize-ulasin" },
 ];
@@ -54,13 +53,13 @@ export default function Navbar() {
                 "font-bold text-xl tracking-tight transition-colors",
                 scrolled || pathname !== "/" ? "text-neutral-900" : "text-white"
               )}>
-                Erzincan <span className="text-primary-600">Eşot Taksi</span>
+                Erzincan <span className="text-primary-600">VİP Taksi</span>
               </span>
               <span className={cn(
                 "text-[10px] uppercase tracking-widest font-semibold",
                 scrolled || pathname !== "/" ? "text-neutral-500" : "text-neutral-300"
               )}>
-                7/24 Havalimanı & Otogar
+                Sevgi Taşıyoruz
               </span>
             </div>
           </Link>
@@ -82,18 +81,18 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="tel:05016410724"
+              href="tel:05518593581"
               className="bg-primary-500 hover:bg-primary-600 text-neutral-900 px-6 py-2.5 rounded-full font-bold transition-all shadow-lg shadow-primary-500/20 flex items-center gap-2 hover:-translate-y-0.5"
             >
               <Phone className="w-4 h-4 fill-current" />
-              0501 641 07 24
+              0551 859 35 81
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-4">
             <Link
-              href="tel:05016410724"
+              href="tel:05518593581"
               className="bg-primary-500 p-2.5 rounded-full text-neutral-900 shadow-md"
             >
               <Phone className="w-5 h-5 fill-current" />
@@ -138,16 +137,17 @@ export default function Navbar() {
               ))}
               <div className="pt-4 grid grid-cols-2 gap-4">
                 <Link
-                  href="tel:05016410724"
+                  href="tel:05518593581"
                   className="flex items-center justify-center gap-2 bg-primary-500 text-neutral-900 py-4 rounded-2xl font-bold shadow-lg shadow-primary-500/10"
                 >
                   <Phone className="w-5 h-5 fill-current" />
                   Ara
                 </Link>
                 <Link
-                  href="https://wa.me/905016410724"
+                  href="https://wa.me/905518593581"
                   className="flex items-center justify-center gap-2 bg-green-500 text-white py-4 rounded-2xl font-bold shadow-lg shadow-green-500/10"
                 >
+                  <MessageCircle className="w-5 h-5" />
                   WhatsApp
                 </Link>
               </div>

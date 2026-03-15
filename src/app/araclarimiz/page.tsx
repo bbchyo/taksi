@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { CheckCircle2, ShieldCheck, Droplets, Wind, User } from "lucide-react";
+import { ShieldCheck, Droplets, Wind, User } from "lucide-react";
 
 export default function VehiclesPage() {
   const features = [
-    { title: "Her Zaman Temiz", desc: "Araçlarımız her gün dezenfekte edilir ve iç-dış temizliği titizlikle yapılır.", icon: <Droplets /> },
-    { title: "Geniş Bagaj Hacmi", desc: "Havalimanı ve otogar transferleriniz için valizlerinize uygun geniş bagaj alanı.", icon: <User /> },
-    { title: "Konforlu İç Mekan", desc: "Yolculuğunuzun her anında konforun tadını çıkarmanız için bakımlı ve yeni araçlar.", icon: <ShieldCheck /> },
-    { title: "Klima ve Hava Temizliği", desc: "Mevsim ne olursa olsun, yolculuğunuz ideal ısıda ve temiz bir havada geçer.", icon: <Wind /> },
+    { title: "Her Zaman Temiz", desc: "Araçlarımız her gün dezenfekte edilir ve iç-dış temizliği titizlikle yapılır.", icon: <Droplets className="w-6 h-6" /> },
+    { title: "Geniş Bagaj Hacmi", desc: "Havalimanı ve otogar transferleriniz için valizlerinize uygun geniş bagaj alanı.", icon: <User className="w-6 h-6" /> },
+    { title: "Konforlu İç Mekan", desc: "Yolculuğunuzun her anında konforun tadını çıkarmanız için bakımlı ve yeni araçlar.", icon: <ShieldCheck className="w-6 h-6" /> },
+    { title: "Klima ve Hava Temizliği", desc: "Mevsim ne olursa olsun, yolculuğunuz ideal ısıda ve temiz bir havada geçer.", icon: <Wind className="w-6 h-6" /> },
   ];
 
   return (
@@ -16,39 +16,50 @@ export default function VehiclesPage() {
           <span className="text-primary-600 font-bold uppercase tracking-widest text-sm mb-4 block">Filomuz</span>
           <h1 className="text-4xl lg:text-6xl font-black text-neutral-900 mb-6">Araçlarımız</h1>
           <p className="text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed italic">
-            Konfor ve güvenlik ilk önceliğimizdir. Profesyonel standartlardaki pırıl pırıl araçlarımızla her an yanınızdayız.
+            Konfor ve güvenlik ilk önceliğimizdir. Pırıl pırıl, bakımlı VİP araçlarımızla her an yanınızdayız.
           </p>
         </div>
       </header>
 
+      {/* Real Taxi Photos Gallery */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
-            <div className="relative group">
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-primary-500 rounded-[4rem] group-hover:h-[60%] transition-all -z-10"></div>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-black text-neutral-900">Taksilerimiz</h2>
+            <div className="w-24 h-1.5 bg-primary-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="group relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white hover:shadow-primary-500/20 transition-all hover:-translate-y-2">
               <Image 
-                src="/hero-taxi.png" 
-                alt="Erzincan Eşot Taksi Modern Araç" 
+                src="/taksi-on.jpg" 
+                alt="Erzincan VİP Taksi - Önden Görünüm" 
                 width={800}
-                height={500}
-                className="relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-700 pointer-events-none"
+                height={600}
+                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                <h3 className="text-white font-black text-2xl">Renault Symbol</h3>
+                <p className="text-neutral-300 font-medium">24 T 0144 · Erzincan VİP Taksi</p>
+              </div>
             </div>
-            <div className="space-y-8">
-              <h2 className="text-3xl lg:text-5xl font-black text-neutral-900 leading-tight">Yolculuğunuzda <br /><span className="text-primary-600 italic">Saray Konforu</span></h2>
-              <p className="text-lg text-neutral-500 font-medium leading-relaxed italic">
-                Erzincan Eşot Taksi olarak sadece bir ulaşım hizmeti değil, huzur dolu bir yolculuk deneyimi vadediyoruz. Periyodik bakımları yapılmış, modern güvenlik sistemlerine sahip araçlarımızla yollar artık çok daha keyifli.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                {["Sarı Taksi", "Geniş Bagaj", "Konforlu Koltuk", "7/24 Teknik Destek"].map((tag, i) => (
-                  <span key={i} className="px-5 py-2 bg-primary-100 text-primary-800 rounded-full font-bold text-xs uppercase tracking-widest">
-                    {tag}
-                  </span>
-                ))}
+
+            <div className="group relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white hover:shadow-primary-500/20 transition-all hover:-translate-y-2">
+              <Image 
+                src="/taksi-yan.jpg" 
+                alt="Erzincan VİP Taksi - Yandan Görünüm" 
+                width={800}
+                height={600}
+                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                <h3 className="text-white font-black text-2xl">Yandan Görünüm</h3>
+                <p className="text-neutral-300 font-medium">Bakımlı ve temiz filo</p>
               </div>
             </div>
           </div>
 
+          {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, i) => (
               <div key={i} className="p-8 rounded-[2.5rem] bg-neutral-50 border border-neutral-100 hover:bg-white hover:shadow-2xl transition-all group">
@@ -69,9 +80,12 @@ export default function VehiclesPage() {
             <h2 className="text-3xl lg:text-5xl font-black italic">Araçlarımızla Tanışmaya Hazır Mısınız?</h2>
             <div className="w-24 h-1 bg-primary-500 rounded-full"></div>
             <p className="text-neutral-400 font-medium max-w-2xl mx-auto text-lg mb-8">
-              Erzincan genelinde uçağınızdan iner inmez veya otogardan çıktığınızda pırıl pırıl bir taksiye binmek için bizi aramayı unutmayın.
+              Pırıl pırıl bir VİP taksiye binmek için bizi aramayı unutmayın. Kredi kartı ile ödeme kabul ediyoruz.
             </p>
-            <a href="tel:05016410724" className="px-12 py-5 bg-primary-500 text-neutral-900 rounded-2xl font-black text-2xl shadow-xl shadow-primary-500/20 hover:scale-105 transition-transform">HEMEN ÇAĞIR</a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="tel:05518593581" className="px-12 py-5 bg-primary-500 text-neutral-900 rounded-2xl font-black text-2xl shadow-xl shadow-primary-500/20 hover:scale-105 transition-transform">HEMEN ÇAĞIR</a>
+              <a href="https://wa.me/905518593581" target="_blank" className="px-12 py-5 bg-green-600 text-white rounded-2xl font-black text-2xl shadow-xl hover:scale-105 transition-transform">WhatsApp</a>
+            </div>
           </div>
         </div>
       </section>
